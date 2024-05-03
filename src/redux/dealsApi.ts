@@ -8,7 +8,7 @@ export const dealsApi = createApi({
   }),
 
   endpoints: builder => ({
-    getDeals: builder.query<Array<Deal>, { token: string }>({
+    getDeals: builder.query<Array<Deal>, string>({
       query: token => ({
         url: "/",
         headers: {

@@ -1,11 +1,11 @@
 import { Header } from "./components"
-import { Register } from "./pages/Register"
+import { Home } from "./pages"
 
 const App = () => {
   return (
     <div className="App">
         <Header />
-        <Register />
+        <Home />
     </div>
   )
 }

@@ -1,0 +1,32 @@
+.deal__list {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  width: 100%;
+  margin: 50px auto;
+}
+.deal__list-title {
+  text-align: start;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.21;
+  color: rgb(178, 159, 126);
+}
+.deal__list-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* @media screen and (max-width: 768px) {
+  .items {
+    padding: 0px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .items {
+    padding: 0px 20px;
+  }
+} */

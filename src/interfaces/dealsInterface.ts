@@ -1,8 +1,9 @@
 export interface Deal {
-    id: number;
+    _id: number;
     title: string;
     price: number;
-    yield: string;
+    yield: number;
+    ticket: number;
     sold: number;
     days_left: number;
     img_url: string;

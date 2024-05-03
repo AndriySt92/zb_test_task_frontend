@@ -1,5 +1,7 @@
-export { Loader } from './Loader'
-export { Header } from './Header'
-export { Error } from './Error'
-export { Form } from './Form'
-export { Button } from './Button'
+export { Loader } from "./Loader"
+export { Header } from "./Header"
+export { Error } from "./Error"
+export { Form } from "./Form"
+export { Button } from "./Button"
+export { DealList } from "./DealList"
+export { DealItem } from "./DealItem"

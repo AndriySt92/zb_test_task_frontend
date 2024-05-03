@@ -1,0 +1,77 @@
+.home__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  background-image: url("https://res.cloudinary.com/drcptrml4/image/upload/v1714646908/zenbit/home_k593vg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.home__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.home__title {
+  margin: 0px;
+  font-size: 64px;
+  font-weight: bold;
+}
+.home__subtitle {
+  font-size: 24px;
+  max-width: 822px;
+  padding: 0px 10px;
+}
+.home__btn {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 24px 10px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.home__btn:hover {
+  background-color: #b29f7e;
+}
+
+@media screen and (max-width: 1024px) {
+  .home__title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home__title {
+    font-size: 36px;
+  }
+  .home__subtitle {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home__title {
+    font-size: 22px;
+  }
+  .home__subtitle {
+    font-size: 16px;
+  }
+}
