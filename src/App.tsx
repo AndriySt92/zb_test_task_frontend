@@ -1,7 +1,11 @@
+import { Header } from "./components"
+import { Register } from "./pages/Register"
+
 const App = () => {
   return (
     <div className="App">
-        Hello world
+        <Header />
+        <Register />
     </div>
   )
 }

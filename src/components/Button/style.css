@@ -1,0 +1,31 @@
+.btn {
+    display: flex;
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: var(--color-brown);
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--color-brown);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 250ms ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--color-brown);
+    color: var(--color-);
+  }
+
+  .btn.btn--withBg {
+    background-color: var(--color-brown);
+    color: #fff;
+  }
+
+  .btn.btn--withBg:hover {
+    background-color: transparent;
+    color: var(--color-brown);
+  }

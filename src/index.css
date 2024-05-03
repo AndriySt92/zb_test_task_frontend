@@ -1,6 +1,8 @@
 :root {
+  --color-white: rgb(255, 255, 255);
   --color-dark: rgb(23, 34, 52);
-  --color-grey: rgb(178, 159, 126);
+  --color-brown: rgb(178, 159, 126);
+  --color-brown-hover: rgb(191, 168, 129)
 
   --font-title: 'Merriweather', serif;
   --font-body: 'Lato', sans-serif;
