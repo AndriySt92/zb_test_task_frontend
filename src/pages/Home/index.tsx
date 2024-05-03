@@ -2,16 +2,9 @@ import React from "react"
 import "./style.css"
 import { DealList, Loader, Error, Button } from "../../components"
 import { useGetDealsQuery } from "../../redux/dealsApi"
-import { useAppSelector } from "../../hooks/hooks"
 
 export const Home = () => {
-  const token = useAppSelector(state => state.user.token)
-  const {
-    data: deals,
-    isLoading,
-    error,
-    isError,
-  } = useGetDealsQuery(token as string)
+  const { data: deals, isLoading, error, isError } = useGetDealsQuery()
 
   if (isLoading) {
     return <Loader />
@@ -36,7 +29,7 @@ export const Home = () => {
       {deals && <DealList deals={deals} />}
       {isError && (
         //@ts-ignore
-        <Error error={error.data.error ? error.data.error : "Occured some error with fetching deals"}
+        <Error error={ error.data.error ? error.data.error : "Occured some error with fetching deals"}
         />
       )}
     </div>

@@ -5,6 +5,7 @@ import App from "./App"
 import { store } from "./redux/store"
 import "./index.css"
 import { BrowserRouter } from "react-router-dom"
+import { AuthGuard } from "./redux/authGuard"
 
 const container = document.getElementById("root")
 
@@ -14,7 +15,9 @@ if (container) {
   root.render(
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <AuthGuard>
+          <App />
+        </AuthGuard>
       </BrowserRouter>
     </Provider>,
   )

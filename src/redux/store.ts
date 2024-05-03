@@ -3,6 +3,7 @@ import { configureStore } from "@reduxjs/toolkit"
 import { authApi } from "./authApi"
 import { dealsApi } from "./dealsApi"
 import userReducer from "./authSlice"
+import { listenerMiddleware } from "../middleware/auth"
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +12,7 @@ export const store = configureStore({
     user: userReducer,
   },
   middleware: getDefaultMiddlware =>
-    getDefaultMiddlware().concat(authApi.middleware, dealsApi.middleware),
+    getDefaultMiddlware().concat(authApi.middleware, dealsApi.middleware).prepend(listenerMiddleware.middleware),
 })
 
 export type AppStore = typeof store

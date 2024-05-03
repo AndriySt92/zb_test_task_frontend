@@ -1,16 +1,15 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { LoginResponse, User } from '../interfaces/userInterface'
+import { authApi } from './authApi'
 
 interface InitialState {
   user: User | null
   isAuthenticated: boolean
-  token: string | null
 }
 
 const initialState: InitialState = {
   user: null,
   isAuthenticated: false,
-  token: null,
 }
 
 const slice = createSlice({
@@ -20,9 +19,25 @@ const slice = createSlice({
     setUser: (state, action: PayloadAction<LoginResponse>) => {
       state.user = { name: action.payload.name, email: action.payload.name }
       state.isAuthenticated = true
-      state.token = action.payload.token
     },
     logout: () => initialState,
+  },
+  extraReducers: builder => {
+    builder
+      .addMatcher(
+        authApi.endpoints.login.matchFulfilled,
+        (state, action: PayloadAction<LoginResponse>) => {
+          state.isAuthenticated = true
+          state.user = { name: action.payload.name, email: action.payload.name }
+        },
+      )
+      .addMatcher(
+        authApi.endpoints.current.matchFulfilled,
+        (state, action: PayloadAction<LoginResponse>) => {
+          state.isAuthenticated = true
+          state.user = { name: action.payload.name, email: action.payload.name }
+        },
+      )
   },
 })
 

@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { Deal } from "../interfaces/dealsInterface"
+import { getToken } from "../utils/getToken"
 
 export const dealsApi = createApi({
   reducerPath: "deals",
@@ -8,11 +9,11 @@ export const dealsApi = createApi({
   }),
 
   endpoints: builder => ({
-    getDeals: builder.query<Array<Deal>, string>({
-      query: token => ({
+    getDeals: builder.query<Array<Deal>, void>({
+      query: () => ({
         url: "/",
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${getToken()}`,
         },
       }),
     }),

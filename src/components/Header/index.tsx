@@ -10,6 +10,7 @@ export const Header = () => {
 
   const handleLogout = () => {
     dispatch(logout())
+    localStorage.removeItem('token')
   }
 
   return (

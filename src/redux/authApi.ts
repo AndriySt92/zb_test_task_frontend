@@ -27,13 +27,16 @@ export const authApi = createApi({
         body,
       }),
     }),
-    current: builder.query<LoginResponse, void>({
-      query: () => ({
+    current: builder.query<LoginResponse, string>({
+      query: (token) => ({
         url: "/current",
         method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       }),
     }),
   }),
 })
 
-export const { useRegisterMutation, useLoginMutation } = authApi
+export const { useRegisterMutation, useLoginMutation, useCurrentQuery } = authApi
