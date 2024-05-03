@@ -1,9 +1,10 @@
 .deal__list {
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
+  max-width: 1290px;
   width: 100%;
   margin: 50px auto;
+  padding: 0px 5px;
 }
 .deal__list-title {
   text-align: start;
@@ -20,13 +21,9 @@
     justify-content: space-around;
 }
 
-/* @media screen and (max-width: 768px) {
-  .items {
-    padding: 0px 20px;
+@media screen and (max-width: 1289px) {
+  .deal__list {
+    align-items: center;
   }
 }
-@media screen and (max-width: 480px) {
-  .items {
-    padding: 0px 20px;
-  }
-} */
+

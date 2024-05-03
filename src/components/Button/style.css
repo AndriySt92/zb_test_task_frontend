@@ -1,7 +1,7 @@
 .btn {
     display: flex;
     width: 160px;
-    height: 40px;
+    height: 44px;
     font-size: 16px;
     justify-content: center;
     align-items: center;
@@ -28,4 +28,11 @@
   .btn.btn--withBg:hover {
     background-color: transparent;
     color: var(--color-brown);
+  }
+
+  @media screen and (max-width: 664px) {
+    .btn {
+      width: 120px;
+      height: 38px;
+    }
   }

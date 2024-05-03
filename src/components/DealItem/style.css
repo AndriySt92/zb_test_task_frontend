@@ -40,10 +40,10 @@
 }
 
 @media screen and (max-width: 664px) {
-  .List__item {
+  .List__item-img {
     width: 430px;
-    height: 200px;
-  }
+    height: 300px;
+  } 
 
   .List__item-details {
     gap: 10px;
@@ -52,9 +52,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  .List__item {
-    width: 360px;
-    height: 180px;
+  .List__item-img {
+    width: 350px;
+    height: 250px;
   }
 
   .List__item-details {
