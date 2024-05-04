@@ -1,7 +1,11 @@
 import React from 'react'
 import './style.css'
 
-export const Error = ({error}) => {
+interface Props {
+  error: string
+}
+
+export const Error: React.FC<Props> = ({error}) => {
   return (
     <div className='error'>{error}</div>
   )
