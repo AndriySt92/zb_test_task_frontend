@@ -3,8 +3,6 @@ import { Button } from "../Button"
 import "./style.css"
 import { useForm } from "react-hook-form"
 import { LoginData, RegisterData } from "../../interfaces/userInterface"
-import { FetchBaseQueryError } from "@reduxjs/toolkit/query"
-import { SerializedError } from "@reduxjs/toolkit"
 
 interface Props {
   callback: (body: LoginData | RegisterData) => Promise<void>
@@ -109,7 +107,7 @@ export const Form: React.FC<Props> = ({
       )}
       {error && (
         <span className="form__error">
-          {error.data.error ? error.data.error : "Occured some error"}
+          {error.data && error.data.error ? error.data.error : "Occured some error"}
         </span>
       )}
 

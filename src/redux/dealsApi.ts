@@ -5,7 +5,7 @@ import { getToken } from "../utils/getToken"
 export const dealsApi = createApi({
   reducerPath: "deals",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/api/deals",
+    baseUrl: "https://zb-test-task-backend.vercel.app/api/deals",
   }),
 
   endpoints: builder => ({
